@@ -9124,3 +9124,10 @@ input[type=range]::-ms-thumb {
 .size-100 {
     width: 100%;
 }
+.toast i {
+    padding-right: 10px;
+    padding-top: 4px;
+}
+.curcor {
+    cursor: pointer;
+}

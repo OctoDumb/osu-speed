@@ -1,5 +1,5 @@
 {
-  "name": "osuspeed",
+  "name": "osu-speed",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "extraFiles": [],
     "win": {
       "target": [
-        "portable"
+        "NSIS"
       ],
       "icon": "typing.ico"
     }

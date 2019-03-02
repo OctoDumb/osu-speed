@@ -37,5 +37,7 @@ npm start
 ## Credits
 
 [OctopuSSX](https://github.com/uzervlad) - made most of the js crap
+
 [cyperdark](https://github.com/cyperdark) - made some finger lickin' good design
+
 Inspired by [fr3fou](https://github.com/fr3fou)'s [osuStreamSpeed.js](https://github.com/fr3fou/osuStreamSpeed.js) (I actually copied 99% of his code)

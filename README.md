@@ -8,7 +8,7 @@ Electron-based osu! stream benchmark
 
 ## How to run
 
-[b]Download a new release from [here](https://github.com/OctoDumb/osu-speed/releases)[/b]
+**Download a new release from [here](https://github.com/OctoDumb/osu-speed/releases)**
     or
 
 1. Clone this repo

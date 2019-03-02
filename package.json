@@ -1,6 +1,6 @@
 {
   "name": "osuspeed",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "build": {
@@ -10,7 +10,7 @@
       "target": [
         "portable"
       ],
-      "icon": "icon.ico"
+      "icon": "typing.ico"
     }
   },
   "scripts": {

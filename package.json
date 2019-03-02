@@ -1,0 +1,30 @@
+{
+  "name": "osuspeed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "build": {
+    "appId": "com.octodumb.osuspeed",
+    "extraFiles": [],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "icon.ico"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "./node_modules/.bin/electron-builder build",
+    "build32": "./node_modules/.bin/electron-builder build --ia32"
+  },
+  "author": "uzervlad",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.1.4",
+    "electron-builder": "^20.38.5"
+  },
+  "dependencies": {
+    "chart.js": "^2.7.3"
+  }
+}

@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="FontAwesome/css/all.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/materialize.css" rel="stylesheet">
+        <script>window.$=window.jQuery=require('./assets/js/jquery.min.js');</script>
+        <script>var CanvasJS=window.CanvasJS=require('./assets/js/canvasjs.min.js');</script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/canvasjs.min.js"></script>
+        <script src="assets/js/materialize.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body class="grey lighten-4">
+        <div class="row">
+            <div class="container">
+                <div class="col s12 mt20">
+                    <ul class="tabs">
+                        <li class="tab col s4"><a class="active" href="#tap"><i class="fas fa-fist-raised"></i> Tap</a></li>
+                        <li class="tab col s4"><a class="stats-tab" href="#stats"><i class="fas fa-chart-line"></i> Stats</a></li>
+                        <li class="tab col s4"><a href="#links"><i class="fas fa-external-link-alt"></i> Links</a></li>
+                    </ul>
+                </div>
+                <div id="tap">
+                    <div class="col s12 mt20">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="row">
+                                        <div class="input-field col s3">
+                                            <input type="text" class="validate" name="firstKey" id="firstKey" value="z">
+                                            <label for="firstKey">1st key</label>
+                                        </div>
+                                        <div class="input-field col s3">
+                                            <input type="text" class="validate" name="secondKey" id="secondKey" value="x">
+                                            <label for="secondKey">2nd key</label>
+                                        </div>
+                                        <div class="input-field col s6">
+                                            <button class="btn indigo waves-effect waves-light start col s12" id="start">Start</button>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <input type="text" class="validate" name="clicksCount" id="clicksCount" value="20">
+                                            <label for="clicksCount">Enter clicks amount</label>
+                                        </div>
+                                        <label class="input-field col s12">
+                                            <input type="checkbox" name="mButtons" id="mButtons" />
+                                            <span>Mouse buttons</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="result">
+                                        <div>Click amount: <span id="clicks">0 clicks</span> / <span id="seconds">0 seconds</span></div>
+                                        <div>Stream speed: <span id="sSpeed">0 BPM</span></div>
+                                        <div>UR: <span id="ur">0</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12"><div id="bpmChart" class="chatOCTO"></div></div>
+                        <div class="col s12">
+                            <ul class="collapsible">
+                                <li>
+                                    <div class="collapsible-header"><i class="far fa-chart-bar"></i> Current session</div>
+                                    <div class="collapsible-body">
+                                        <span>
+                                            <table id="currentSession" class="highlight centered">
+                                                <tr>
+                                                    <th>Clicks</th>
+                                                    <th>Date</th>
+                                                    <th>Time</th>
+                                                    <th>BPM</th>
+                                                    <th>UR</th>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td class="totalClicks">228</td>
+                                                    <td class="Date">15.02.2019 20:32</td>
+                                                    <td class="totalTime">10s</td>
+                                                    <td class="totalBPM">222</td>
+                                                    <td class="totalUR">75.43</td>
+                                                </tr> -->
+                                            </table>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="stats">
+                    <div class="col s12 mt20">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content"><h4>Select data</h4><input type="date" class="datepicker" id="dayChartInput" required></div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 mt10">
+                            <div class="col s12"><a class="btn-large white black-text waves-effect waves-black shadow-black-mr size-100 import-stats"><i class="fas fa-file-import"></i> Import</a></div>
+                            <div class="col s12"><a class="btn-large white black-text waves-effect waves-indigo shadow-black-mr size-100 export-stats"><i class="fas fa-file-export"></i> Export</a></div>
+
+                        </div>
+                        <div class="col s12"><div id="dayChart" class="chatOCTO"></div></div>
+                        <div class="col s12">
+                            <ul class="collapsible">
+                                <li>
+                                    <div class="collapsible-header" id="dayChartTitle"><i class="fas fa-chart-area"></i> Show table</div>
+                                    <div class="collapsible-body">
+                                        <span>
+                                            <table id="dayTableStat" class="highlight centered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Clicks</th>
+                                                        <th>Date</th>
+                                                        <th>Time</th>
+                                                        <th>BPM</th>
+                                                        <th>UR</th>
+                                                    </tr> 
+                                                </thead>
+                                                <tbody id="dayTableBody">
+                                                </tbody>
+                                                <!-- <tr>
+                                                    <td class="totalClicks">228</td>
+                                                    <td class="Date">15.02.2019 20:32</td>
+                                                    <td class="totalTime">10s</td>
+                                                    <td class="totalBPM">222</td>
+                                                    <td class="totalUR">75.43</td>
+                                                </tr> -->
+                                            </table>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="links">
+                    <div class="col s12 mt20">
+                        <div class="col s12 m6 l4"><a class="btn-large white black-text waves-effect waves-black shadow-black-mr size-100 linkCopy"><i class="fab fa-github"></i> Github</a></div>
+                        <div class="col s12 m6 l4"><a class="btn-large white black-text waves-effect waves-indigo shadow-black-mr size-100 linkCopy"><i class="fab fa-discord indigo-text"></i> Discord</a></div>
+                        <div class="col s12 m6 l4"><a class="btn-large white black-text waves-effect waves-red shadow-black-mr size-100 linkCopy"><i class="fab fa-youtube red-text"></i> Youtube</a></div>
+                    </div>
+                </div>
+                <div class="col s12 center">
+                    Created by <a class="linkCopy" link="https://github.com/uzervlad">OctopuSSX</a> & <a class="linkCopy" link="https://github.com/cyperdark">cyperdark</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function(){ $('.tabs').tabs(); });
+            $(document).ready(function(){ $('.collapsible').collapsible(); });
+            $(document).ready(function(){ $('.datepicker').datepicker(); });
+        </script>
+    </body>
+</html>

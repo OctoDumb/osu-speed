@@ -390,7 +390,7 @@ $(".stats-tab").click(function () {
     let y = Number(val[0]);
     let m = Number(val[1]);
     let d = Number(val[2]);
-    updateDay(y,m,d);
+    setTimeout(() => {updateDay(y,m,d);}, 100);
 });
 
 $(".import-stats").click(() => {

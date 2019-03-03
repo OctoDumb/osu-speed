@@ -341,14 +341,14 @@ function updateDay(y, m, d) {
         dayChart.options.title = {text: `Stats for ${fd(d)}.${fd(m)}.${y}`};
         let bpmD = {
             name: "BPM",
-            type: "spline",
+            type: "line",
             yValueFormatString: "# BPM",
             showInLegend: true,
             dataPoints: []
         };
         let urD = {
             name: "UR",
-            type: "spline",
+            type: "line",
             showInLegend: true,
             dataPoints: []
         };

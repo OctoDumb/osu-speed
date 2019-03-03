@@ -7,6 +7,10 @@ Electron-based osu! stream benchmark
 - Statistics for every day
 - Stats import/export
 
+## Known bugs
+
+- [] Stats chart is rendered wrong (#1)
+
 ## Requirements
 
 - Node.JS

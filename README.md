@@ -9,7 +9,7 @@ Electron-based osu! stream benchmark
 
 ## Known bugs
 
-- [] Stats chart is rendered wrong (#1)
+- [ ] Stats chart is rendered wrong ([#1](https://github.com/OctoDumb/osu-speed/issues/1))
 
 ## Requirements
 

@@ -3,7 +3,7 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-.materialize-red {
+ .materialize-red {
   background-color: #e51c23 !important;
 }
 
@@ -2609,7 +2609,7 @@ ul:not(.browser-default) > li {
 }
 
 a {
-  color: #039be5;
+  color: #3f51b5;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -4495,7 +4495,7 @@ html {
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: normal;
-  color: rgba(0, 0, 0, 0.87);
+  color: #7d7d7d;
 }
 
 @media only screen and (min-width: 0) {
@@ -4977,7 +4977,7 @@ small {
 }
 
 .toast {
-  border-radius: 2px;
+  border-radius: 10px;
   top: 35px;
   width: auto;
   margin-top: 10px;
@@ -4986,24 +4986,25 @@ small {
   height: auto;
   min-height: 48px;
   line-height: 1.5em;
-  background-color: #323232;
+  background-color: #ffffff;
   padding: 10px 25px;
   font-size: 1.1rem;
   font-weight: 300;
-  color: #fff;
+  color: #000;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   cursor: default;
+  box-shadow: 0 4px 20px rgba(177, 177, 177, 0.5);
 }
 
 .toast .toast-action {
@@ -9127,6 +9128,7 @@ input[type=range]::-ms-thumb {
 .toast i {
     padding-right: 10px;
     padding-top: 4px;
+    color: #3f51b5;
 }
 .curcor {
     cursor: pointer;

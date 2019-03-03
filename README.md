@@ -2,6 +2,11 @@
 
 Electron-based osu! stream benchmark
 
+## Features
+
+- Statistics for every day
+- Stats import/export
+
 ## Requirements
 
 - Node.JS
@@ -42,11 +47,6 @@ npm run build
 ```shell
 npm run build32
 ```
-
-## Features
-
-- Statistics for every day
-- Stats import/export
 
 ## Credits
 

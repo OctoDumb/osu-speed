@@ -1,5 +1,5 @@
 var { clipboard, remote } = require('electron');
-var { dialog } = remote;
+var { dialog, app } = remote;
 
 $(document).ready(function() {
 
@@ -16,7 +16,9 @@ $("#dayChartInput").val(`${ddd.getFullYear()}-${fd(ddd.getMonth())}-${fd(ddd.get
 
 var fs = require('fs');
 
-if(!fs.existsSync("./stats.json")) fs.writeFileSync("./stats.json", "{}");
+const dbDir = app.getPath('userData').split("\\").join("/");
+
+if(!fs.existsSync(`${dbDir}/stats.json`)) fs.writeFileSync(`${dbDir}/stats.json`, "{}");
 
 let BPMChart = new CanvasJS.Chart("bpmChart", {
     zoomEnabled: true,
@@ -64,7 +66,7 @@ let updater, std, isMouse, variance, ur, beginTime = -1;
 let runNumber = 0;
 let counterNumber = 0;
 
-let stats = JSON.parse(fs.readFileSync("./stats.json").toString());
+let stats = JSON.parse(fs.readFileSync(`${dbDir}/stats.json`).toString());
 
 $("#start").click(function() {
     console.log("Start button clicked");
@@ -152,7 +154,7 @@ function stop(save) {
             ur: Number(ur.toFixed(3))
         };
         stats[dd.getFullYear()][dd.getMonth()][dd.getDate()].push(res);
-        fs.writeFileSync('./stats.json', JSON.stringify(stats));
+        fs.writeFileSync(`${dbDir}/stats.json`, JSON.stringify(stats));
         if($("dayChartInput").val() == `${ddd.getFullYear()}-${fd(ddd.getMonth())}-${fd(ddd.getDate())}`) {
             console.log('Yeee');
             dayChart.options.data[0].dataPoints.push({x: new Date(d), y: Number(document.getElementById("sSpeed").innerText.split(" ")[0])});
@@ -410,7 +412,7 @@ $(".import-stats").click(() => {
         try {
             let json = JSON.parse(file);
             if(file.startsWith("[")) throw Error("Found Array instead of Object");
-            fs.writeFileSync("./stats.json", file);
+            fs.writeFileSync(`${dbDir}/stats.json`, file);
             stats = json;
             let val = $("#dayChartInput").val().split("-");
             let y = Number(val[0]);

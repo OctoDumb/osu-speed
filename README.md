@@ -29,6 +29,20 @@ npm install
 npm start
 ```
 
+## How to build
+
+- x64
+
+```shell
+npm run build
+```
+
+- x32
+
+```shell
+npm run build32
+```
+
 ## Features
 
 - Statistics for every day

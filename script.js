@@ -39,7 +39,7 @@ let BPMChart = new CanvasJS.Chart("bpmChart", {
 BPMChart.render();
 
 let dayChart = new CanvasJS.Chart("dayChart", {
-    zoomEnabled: false,
+    zoomEnabled: true,
     axisY: {
         title: "data",
         includeZero: false

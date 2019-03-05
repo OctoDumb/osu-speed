@@ -205,13 +205,13 @@ $(document).keyup(e => {
             ks[0] = {
                 code: e.keyCode,
                 key: e.key
-            }
+            };
         } else {
             key2 = e.keyCode;
             ks[1] = {
                 code: e.keyCode,
                 key: e.key
-            }
+            };
         }
         input.val(e.key);
         fs.writeFileSync(`${dbDir}/keys.json`, JSON.stringify(ks));

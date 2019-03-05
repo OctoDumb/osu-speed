@@ -60,11 +60,27 @@ let isTestRunning = false;
 let clickLimit;
 let key1 = 90;
 let key2 = 88;
+let ks;
 
 let updater, std, isMouse, variance, ur, beginTime = -1;
 
 let runNumber = 0;
 let counterNumber = 0;
+
+if(!fs.existsSync(`${dbDir}/keys.json`)) {
+    let keys = [{code: 90, key: 'z'}, {code: 88, key: 'x'}];
+    fs.writeFileSync(`${dbDir}/keys.json`, JSON.stringify(keys));
+}
+
+if(fs.existsSync(`${dbDir}/keys.json`)) {
+    let keys = JSON.parse(fs.readFileSync(`${dbDir}/keys.json`));
+    console.log(keys);
+    ks = keys;
+    key1 = keys[0].code;
+    key2 = keys[1].code;
+    $("#firstKey").val(keys[0].key);
+    $("#secondKey").val(keys[1].key);
+}
 
 let stats = JSON.parse(fs.readFileSync(`${dbDir}/stats.json`).toString());
 
@@ -186,8 +202,19 @@ $(document).keyup(e => {
         let input = $('#firstKey').is(':focus') ? $('#firstKey') : $('#secondKey');
         if($('#firstKey').is(':focus')) {
             key1 = e.keyCode;
-        } else key2 = e.keyCode;
+            ks[0] = {
+                code: e.keyCode,
+                key: e.key
+            }
+        } else {
+            key2 = e.keyCode;
+            ks[1] = {
+                code: e.keyCode,
+                key: e.key
+            }
+        }
         input.val(e.key);
+        fs.writeFileSync(`${dbDir}/keys.json`, JSON.stringify(ks));
     }
 });
 

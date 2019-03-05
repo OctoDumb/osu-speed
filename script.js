@@ -191,6 +191,10 @@ $(document).keyup(e => {
     }
 });
 
+$(document).keypress(e => {
+    stopEvent(e);
+});
+
 $(document).keyup(e => {
     stopEvent(e);
     if($('#firstKey').is(':focus') || $('#secondKey').is(':focus')) return;

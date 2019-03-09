@@ -1,6 +1,6 @@
 {
   "name": "osu-speed",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "",
   "main": "index.js",
   "build": {
@@ -25,6 +25,7 @@
     "electron-builder": "^20.38.5"
   },
   "dependencies": {
-    "chart.js": "^2.7.3"
+    "chart.js": "^2.7.3",
+    "electron-drag": "^1.2.2"
   }
 }

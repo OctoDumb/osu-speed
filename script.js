@@ -476,3 +476,10 @@ $(".export-stats").click(() => {
 });
 
 });
+let fullscreen = false;
+
+function maxsize() {
+    if(!fullscreen) remote.BrowserWindow.getFocusedWindow().maximize();
+    else remote.BrowserWindow.getFocusedWindow().unmaximize();
+    fullscreen = !fullscreen;
+}

@@ -100,6 +100,7 @@ $("#start").click(function() {
 });
 
 function init() {
+    changeStatus("Test running", ["running-pulse"]);
     console.log("Started the test");
     isTestRunning = true;
     clicks = [];
@@ -135,6 +136,7 @@ function dateNow() {
 }
 
 function stop(save) {
+    changeStatus("Test stopped");
     console.log("Stopped the test");
     isTestRunning = false;
     upd(false);
@@ -482,4 +484,8 @@ function maxsize() {
     if(!fullscreen) remote.BrowserWindow.getFocusedWindow().maximize();
     else remote.BrowserWindow.getFocusedWindow().unmaximize();
     fullscreen = !fullscreen;
+}
+
+function changeStatus(text, classes = undefined) {
+    document.getElementById("c-status").innerHTML = `<span class="black-text opChange${classes ? ` ${classes.join(" ")}` : ""}">${text}</span>`;
 }

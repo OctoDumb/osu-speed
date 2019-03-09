@@ -12,7 +12,7 @@
   position:  absolute;
   top: 0;
   left:  0;
-  width: 86%;
+  width: calc(100vw - 175px);
   height: 100%;
   -webkit-app-region: drag;
 }
@@ -247,7 +247,7 @@
     transform: rotate(0deg);
   }
 }
-.circle {
+.circler {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -372,4 +372,43 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 @media only screen and (max-width: 1000px) {
 .logo {left: 47%;}
+}
+
+.idle-infinite {
+  animation-direction: alternate;
+  animation: rotateinf 3s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes rotateinf {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(180deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(360deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.opChange {
+  font-size: 20px;
+  opacity: 0;
+  animation: opChange .5s ease forwards;
+}
+@keyframes opChange {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.running-pulse {
+  opacity: 0;
+  animation: opChange .5s ease forwards, rpulse 1s ease infinite;
+  padding: 0px 20px;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-color: black;
+  border-radius: 20px;
+}
+@keyframes rpulse {
+  0% {padding: 0px 0px;border-left: 2px solid;border-right: 2px solid;border-color: transparent;}
+  50% {border-color: black;}
+  100% {padding: 0px 80px;border-left: 2px solid;border-right: 2px solid;border-color: transparent;}
 }

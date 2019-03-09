@@ -16,31 +16,13 @@
             <div class="logo">
                 <div class="logo_name">osu!speed</div>
                 <div class="version">v0.1.4</div>
-                <div class="finger finger-1">
-                    <div class="finger-item">
-                        <span></span><i></i>
-                    </div>
-                </div>
-                <div class="finger finger-2">
-                    <div class="finger-item">
-                        <span></span><i></i>
-                    </div>
-                </div>
-                <div class="finger finger-3">
-                    <div class="finger-item">
-                        <span></span><i></i>
-                    </div>
-                </div>
-                <div class="finger finger-4">
-                    <div class="finger-item">
-                        <span></span><i></i>
-                    </div>
-                </div>
-                <div class="last-finger">
-                    <div class="last-finger-item"><i></i></div>
-                </div>
+                <div class="finger finger-1"><div class="finger-item"><span></span><i></i></div></div>
+                <div class="finger finger-2"><div class="finger-item"><span></span><i></i></div></div>
+                <div class="finger finger-3"><div class="finger-item"><span></span><i></i></div></div>
+                <div class="finger finger-4"><div class="finger-item"><span></span><i></i></div></div>
+                <div class="last-finger"><div class="last-finger-item"><i></i></div></div>
             </div>
-            <div class="circle"></div>
+            <div class="circler"></div>
             <div onclick="remote.BrowserWindow.getFocusedWindow().minimize();" class="hider"><i class="fas fa-sort-down"></i></div>
             <div onclick="maxsize()" class="resize"><i class="far fa-square"></i></div>
             <div onclick="window.close()" class="close"><i class="fas fa-times"></i></div>
@@ -76,7 +58,7 @@
                                             <input type="text" class="validate" name="clicksCount" id="clicksCount" value="20">
                                             <label for="clicksCount">Enter clicks amount</label>
                                         </div>
-                                        <label class="input-field col s12">
+                                        <label class="input-field col s12" style="margin: 0;">
                                             <input type="checkbox" name="mButtons" id="mButtons" />
                                             <span>Mouse buttons</span>
                                         </label>
@@ -85,12 +67,15 @@
                             </div>
                         </div>
                         <div class="col s12 m6">
-                            <div class="card">
-                                <div class="card-content">
-                                    <div class="result">
-                                        <div>Click amount: <span id="clicks">0 clicks</span> / <span id="seconds">0 seconds</span></div>
-                                        <div>Stream speed: <span id="sSpeed">0 BPM</span></div>
-                                        <div>UR: <span id="ur">0</span></div>
+                            <div class="col s12 m12"><div class="card"><div class="card-content center"><div id="c-status"><span class="black-text opChange">Waiting..</span></div></div></div></div>
+                            <div class="col s12 m12">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="result">
+                                            <div>Click amount: <span id="clicks">0 clicks</span> / <span id="seconds">0 seconds</span></div>
+                                            <div>Stream speed: <span id="sSpeed">0 BPM</span></div>
+                                            <div>UR: <span id="ur">0</span></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

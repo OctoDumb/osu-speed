@@ -4,7 +4,7 @@ const { app, BrowserWindow } = electron;
 let window;
 
 app.on('ready', () => {
-    window = new BrowserWindow({width: 1200, height: 800, useContentSize: true, show: false});
+    window = new BrowserWindow({frame: false,width: 1200, height: 800, minWidth: 500, minHeight: 500, useContentSize: true, show: false});
     window.on('ready-to-show', ()=>window.show());
     window.loadFile('index.html');
 });

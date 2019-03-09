@@ -12,9 +12,43 @@
         <script src="script.js"></script>
     </head>
     <body class="grey lighten-4">
+        <div class="frame">
+            <div class="logo">
+                <div class="logo_name">osu!speed</div>
+                <div class="version">v0.1.4</div>
+                <div class="finger finger-1">
+                    <div class="finger-item">
+                        <span></span><i></i>
+                    </div>
+                </div>
+                <div class="finger finger-2">
+                    <div class="finger-item">
+                        <span></span><i></i>
+                    </div>
+                </div>
+                <div class="finger finger-3">
+                    <div class="finger-item">
+                        <span></span><i></i>
+                    </div>
+                </div>
+                <div class="finger finger-4">
+                    <div class="finger-item">
+                        <span></span><i></i>
+                    </div>
+                </div>
+                <div class="last-finger">
+                    <div class="last-finger-item"><i></i></div>
+                </div>
+            </div>
+            <div class="circle"></div>
+            <div onclick="remote.BrowserWindow.getFocusedWindow().minimize();" class="hider"><i class="fas fa-sort-down"></i></div>
+            <div onclick="maxsize()" class="resize"><i class="far fa-square"></i></div>
+            <div onclick="window.close()" class="close"><i class="fas fa-times"></i></div>
+            <div class="gradowo"></div>
+        </div>
         <div class="row">
             <div class="container">
-                <div class="col s12 mt20">
+                <div class="col s12 mt105">
                     <ul class="tabs">
                         <li class="tab col s4"><a class="active" href="#tap"><i class="fas fa-fist-raised"></i> Tap</a></li>
                         <li class="tab col s4"><a class="stats-tab" href="#stats"><i class="fas fa-chart-line"></i> Stats</a></li>

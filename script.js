@@ -196,9 +196,13 @@ $(".linkCopy").click(function () {
     M.toast({html: '<i class="fas fa-pen"></i> Link copied to clipboard!'});
 });
 
+$(document).keydown(e => {
+    if($('#firstKey').is(':focus') || $('#secondKey').is(':focus')) stopEvent(e);
+});
+
 $(document).keyup(e => {
     console.log("Key pressed: ", e.keyCode);
-    stopEvent(e);
+    if(!$('#clicksCount').is(':focus')) stopEvent(e);
     if($('#firstKey').is(':focus') || $('#secondKey').is(':focus')) {
         console.log("in input");
         let input = $('#firstKey').is(':focus') ? $('#firstKey') : $('#secondKey');
@@ -220,12 +224,8 @@ $(document).keyup(e => {
     }
 });
 
-$(document).keypress(e => {
-    stopEvent(e);
-});
-
 $(document).keyup(e => {
-    stopEvent(e);
+    if(!$('#clicksCount').is(':focus')) stopEvent(e);
     if($('#firstKey').is(':focus') || $('#secondKey').is(':focus')) return;
     console.log(isTestRunning);
     if(isTestRunning) {

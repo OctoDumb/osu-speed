@@ -1,6 +1,6 @@
 {
   "name": "osu-speed",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "build": {
@@ -22,7 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^3.1.4",
-    "electron-builder": "^20.38.5"
+    "electron-builder": "^20.40.0"
   },
   "dependencies": {
     "chart.js": "^2.7.3",

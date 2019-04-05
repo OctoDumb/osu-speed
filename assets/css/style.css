@@ -4,9 +4,8 @@
   left: 0;
   width: 100%;
   height: 35px;
-  background:  white;
+  background: #2e324c;
   z-index: 2;
-  box-shadow: 0 4px 20px rgba(177,177,177,0.5);
 }
 .gradowo {
   position:  absolute;
@@ -97,7 +96,7 @@
   height: 100%;
   border-radius: 6px 6px 8px 8px;
   background-clip: padding-box;
-  background: #3f51b5;
+  background: #4b5282;
 }
 .logo .finger-item span {
   position: absolute;
@@ -142,7 +141,7 @@
   height: 13px;
   border-radius: 0 5px 14px 0;
   background-clip: padding-box;
-  background: #3f51b5;
+  background: #4b5282;
 }
 .logo .last-finger-item i {
   position: absolute;
@@ -150,7 +149,7 @@
   top: -8px;
   width: 22px;
   height: 8px;
-  background: #3f51b5;
+  background: #4b5282;
   overflow: hidden;
 }
 .logo .last-finger-item i:after {
@@ -162,7 +161,7 @@
   height: 20px;
   border-radius: 0 0 15px 15px;
   background-clip: padding-box;
-  background: #ffffff;
+  background: #2e324c;
 }
 @keyframes finger-3-animation {
   0% {padding: 0 0 0 0;}
@@ -254,22 +253,23 @@
   transform: translate(-50%,-50%);
   width: 300px;
   height: 150px;
-  background: white;
+  background: #2e324c;
   border-radius: 100% !important;
-  border-bottom: 2px solid #3f51b5;
+  border-bottom: 2px solid #ffffff;
   -webkit-app-region: drag;
 }
 .logo_name {
   position: absolute;
   top: 20%;
   left: 140%;
-  color: black;
+  color: white;
   font-size: 20px;
   text-transform:  uppercase;
   transform: translate(-50%,-50%);
 }
 .version {
   position: absolute;
+  color: #a7a7a7;
   top: 57%;
   left: 126%;
   font-size: 16px;
@@ -277,37 +277,40 @@
   transform: translate(-50%,-50%);
 }
 .hider {
-  position: fixed;
+  margin-top: -14px;
   cursor:  pointer;
-  top: -20px;
-  right: 106px;
   color: #26a69a;
   padding: 0px 15px;
-  font-size: 50px;
+  font-size: 40px;
   transform: scale(1, 1);
   transition: all .3s;
 }
 .hider:hover {
+  color: #ffffff;
+  background: rgba(38, 166, 154, .5);
+}
+.hider:hover i {
   animation: bounce .5s ease forwards;
 }
 @keyframes bounce {
-  0% {top: -20px;transform: scale(1, 1);}
-  50% {top: -28px;transform: scale(.7, 1.8);}
-  100% {top: -20px;transform: scale(1, 1);}
+  0% {transform: scale(1, 1);}
+  50% {transform: scale(.7, 1.8);}
+  100% {transform: scale(1, 1);}
 }
 .close {
-  position: fixed;
   cursor:  pointer;
-  top: 3px;
-  right: 0;
   color: #f44336;
-  padding: 0px 15px;
+  padding: 2px 15px;
   font-size: 30px;
   text-shadow: 0 0 0px;
   transform: rotate(0deg);
   transition: all .3s;
 }
 .close:hover {
+  color: #ffffff;
+  background: rgba(244, 67, 54, .5);
+}
+.close:hover i {
   animation: shadRot 1s ease forwards;
 }
 @keyframes shadRot {
@@ -316,17 +319,21 @@
   100% {text-shadow: 0 0 0px;transform: rotate(180deg);}
 }
 .resize {
-  position: fixed;
   cursor: pointer;
-  top: 3px;
-  right: 50px;
   color: #ffab40;
   padding: 0px 15px;
-  font-size: 30px;
+  font-size: 25px;
   transform: scale(1, 1);
   transition: all .3s;
 }
+.resize i {
+  margin-top: 4px;
+}
 .resize:hover {
+  color: #ffffff;
+  background: rgba(255, 171, 64, .5);
+}
+.resize:hover i {
   animation: bounce1 .5s ease forwards;
 }
 @keyframes bounce1 {
@@ -342,30 +349,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
 }
 /* Scroll bar */
-::-webkit-scrollbar-track {border-radius: 10px;}
+::-webkit-scrollbar-track {background-color: #2e324c;}
 ::-webkit-scrollbar {width: 10px;}
-::-webkit-scrollbar-thumb {border-radius: 10px;background-color: #3f51b5;}
+::-webkit-scrollbar-thumb {border-radius: 10px;background-color: #4b5282;}
 @media only screen and (max-width: 640px) {
 .logo {left: 45%;}
-.hider {
-  top: -12px;
-  right: 64px;
-  padding: 0px 6px;
-  font-size: 40px;
-}
-.hider:hover {
-  top: -18px;
-}
-.close {
-  padding: 0px 6px;
-  font-size: 25px;
-}
-.resize {
-  top: 3px;
-  right: 30px;
-  padding: 0px 6px;
-  font-size: 25px;
-}
 }
 @media only screen and (max-width: 900px) {
 .logo {left: 46%;}
@@ -387,8 +375,15 @@ input[type=date]::-webkit-calendar-picker-indicator {
   75% {transform: rotate(360deg);}
   100% {transform: rotate(360deg);}
 }
-
+.buttonss {
+  position:  absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
 .opChange {
+  color:  white !important;
   font-size: 20px;
   opacity: 0;
   animation: opChange .5s ease forwards;
@@ -404,11 +399,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 0px 20px;
   border-left: 2px solid;
   border-right: 2px solid;
-  border-color: black;
+  border-color: white;
   border-radius: 20px;
 }
 @keyframes rpulse {
   0% {padding: 0px 0px;border-left: 2px solid;border-right: 2px solid;border-color: transparent;}
-  50% {border-color: black;}
+  50% {border-color: white;}
   100% {padding: 0px 80px;border-left: 2px solid;border-right: 2px solid;border-color: transparent;}
 }

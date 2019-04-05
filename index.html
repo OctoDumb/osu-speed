@@ -15,7 +15,7 @@
         <div class="frame">
             <div class="logo">
                 <div class="logo_name">osu!speed</div>
-                <div class="version">v0.1.4</div>
+                <div class="version">v0.2.0</div>
                 <div class="finger finger-1"><div class="finger-item"><span></span><i></i></div></div>
                 <div class="finger finger-2"><div class="finger-item"><span></span><i></i></div></div>
                 <div class="finger finger-3"><div class="finger-item"><span></span><i></i></div></div>
@@ -23,10 +23,12 @@
                 <div class="last-finger"><div class="last-finger-item"><i></i></div></div>
             </div>
             <div class="circler"></div>
-            <div onclick="remote.BrowserWindow.getFocusedWindow().minimize();" class="hider"><i class="fas fa-sort-down"></i></div>
-            <div onclick="maxsize()" class="resize"><i class="far fa-square"></i></div>
-            <div onclick="window.close()" class="close"><i class="fas fa-times"></i></div>
             <div class="gradowo"></div>
+            <div class="buttonss">
+                <div onclick="remote.BrowserWindow.getFocusedWindow().minimize();" class="hider"><i class="fas fa-sort-down"></i></div>
+                <div onclick="maxsize()" class="resize"><i class="far fa-square"></i></div>
+                <div onclick="window.close()" class="close"><i class="fas fa-times"></i></div>
+            </div>
         </div>
         <div class="row">
             <div class="container">
@@ -67,7 +69,7 @@
                             </div>
                         </div>
                         <div class="col s12 m6">
-                            <div class="col s12 m12"><div class="card"><div class="card-content center"><div id="c-status"><span class="black-text opChange">Waiting..</span></div></div></div></div>
+                            <div class="col s12 m12"><div class="card"><div class="card-content center"><div id="c-status"><span class="opChange">Waiting..</span></div></div></div></div>
                             <div class="col s12 m12">
                                 <div class="card">
                                     <div class="card-content">
@@ -111,8 +113,8 @@
                             </div>
                         </div>
                         <div class="col s12 m6 mt10">
-                            <div class="col s12"><a class="btn-large white black-text waves-effect waves-black shadow-black-mr size-100 import-stats"><i class="fas fa-file-import indigo-text"></i> Import</a></div>
-                            <div class="col s12"><a class="btn-large white black-text waves-effect waves-indigo shadow-black-mr size-100 export-stats"><i class="fas fa-file-export indigo-text"></i> Export</a></div>
+                            <div class="col s12"><a class="btn-large white waves-effect waves-black shadow-black-mr size-100 import-stats"><i class="fas fa-file-import indigo-text"></i> Import</a></div>
+                            <div class="col s12"><a class="btn-large white waves-effect waves-indigo shadow-black-mr size-100 export-stats"><i class="fas fa-file-export indigo-text"></i> Export</a></div>
 
                         </div>
                         <div class="col s12"><div id="dayChart" class="chatOCTO"></div></div>
@@ -145,13 +147,13 @@
                 <div id="links">
                     <div class="col s12 mt20">
                         <div class="col s12 m6 l4">
-                            <a class="btn-large white black-text waves-effect waves-black shadow-black-mr size-100 linkCopy" link="https://github.com/OctoDumb/osu-speed"><i class="fab fa-github"></i> Github</a>
+                            <a class="btn-large white waves-effect waves-black shadow-black-mr size-100 linkCopy" link="https://github.com/OctoDumb/osu-speed"><i class="fab fa-github"></i> Github</a>
                         </div>
                         <div class="col s12 m6 l4">
-                            <a class="btn-large white black-text waves-effect waves-indigo shadow-black-mr size-100 linkCopy" link="https://discord.gg/Wsa3944"><i class="fab fa-discord indigo-text"></i> Discord</a>
+                            <a class="btn-large white waves-effect waves-indigo shadow-black-mr size-100 linkCopy" link="https://discord.gg/Wsa3944"><i class="fab fa-discord indigo-text"></i> Discord</a>
                         </div>
                         <div class="col s12 m6 l4">
-                            <a class="btn-large white black-text waves-effect waves-red shadow-black-mr size-100 linkCopy" link="https://www.youtube.com/channel/UC4HgAds5dRvolCw_yh0_yrA"><i class="fab fa-youtube red-text"></i> Youtube</a>
+                            <a class="btn-large white waves-effect waves-red shadow-black-mr size-100 linkCopy" link="https://www.youtube.com/channel/UC4HgAds5dRvolCw_yh0_yrA"><i class="fab fa-youtube red-text"></i> Youtube</a>
                         </div>
                     </div>
                 </div>

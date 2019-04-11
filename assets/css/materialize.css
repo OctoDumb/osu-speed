@@ -3333,11 +3333,11 @@ h4 {
 	height: auto;
 	min-height: 48px;
 	line-height: 1.5em;
-	background-color: #fff;
+	background-color: #2e324c;
 	padding: 10px 25px;
 	font-size: 1.1rem;
 	font-weight: 300;
-	color: #000;
+	color: #fff;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -3351,7 +3351,6 @@ h4 {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	cursor: default;
-	box-shadow: 0 4px 20px rgba(177, 177, 177, 0.5)
 }
 
 .toast .toast-action {
@@ -3364,7 +3363,7 @@ h4 {
 .toast i {
 	padding-right: 10px;
 	padding-top: 4px;
-	color: #3f51b5
+	color: #ffffff;
 }
 
 @media only screen and (max-width:600px) {
